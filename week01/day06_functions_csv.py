@@ -50,6 +50,20 @@ def find_highest_salary_from_csv():
 
         return employees_highest_salary
         
-
 result = find_highest_salary_from_csv()
+print(result)
+
+# Count the number of employees in the CSV file
+def count_employees_from_csv():
+    count=0
+
+    with open("week01/employees.csv") as file:
+        reader=csv.DictReader(file)
+
+        for row in reader:
+            count += 1 
+        return count
+
+        
+result = count_employees_from_csv()
 print(result)
